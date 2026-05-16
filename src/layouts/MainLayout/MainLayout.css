@@ -6,8 +6,12 @@
 
 .layout-content {
   flex: 1;
-  padding: 2rem;
   background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.16), transparent 32%),
-    linear-gradient(180deg, #eff6ff 0%, #f8fafc 40%, #ffffff 100%);
+    radial-gradient(circle at top, var(--color-page-glow), transparent 32%),
+    linear-gradient(
+      180deg,
+      var(--color-page-start) 0%,
+      var(--color-page-mid) 40%,
+      var(--color-page-end) 100%
+    );
 }

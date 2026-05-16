@@ -11,9 +11,9 @@
   min-width: 10rem;
   padding: 0.9rem 1.2rem;
   border-radius: 18px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: #102a43;
+  background: var(--color-surface-strong);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
   font-size: 1rem;
   font-weight: 600;
 }

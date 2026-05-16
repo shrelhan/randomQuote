@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 
-function Navigation() {
+function Navigation({ theme, onThemeToggle }) {
+  const isDark = theme === 'dark';
+
   return (
     <nav className="navigation">
       <div className="nav-container">
@@ -27,6 +29,19 @@ function Navigation() {
             </Link>
           </li>
         </ul>
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={onThemeToggle}
+          aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+          aria-pressed={isDark}
+          title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+        >
+          <span className="theme-toggle-icon" aria-hidden="true">
+            {isDark ? '☀' : '☾'}
+          </span>
+          <span>{isDark ? 'Light' : 'Dark'}</span>
+        </button>
       </div>
     </nav>
   );

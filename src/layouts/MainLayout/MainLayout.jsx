@@ -1,10 +1,10 @@
 import Navigation from './Navigation';
 import './MainLayout.css';
 
-function MainLayout({ children }) {
+function MainLayout({ children, theme, onThemeToggle }) {
   return (
     <div className="layout">
-      <Navigation />
+      <Navigation theme={theme} onThemeToggle={onThemeToggle} />
       <div className="layout-content">{children}</div>
     </div>
   );
