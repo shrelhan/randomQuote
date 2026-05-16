@@ -1,24 +1,24 @@
-import Counter from './components/counter/Counter';
-import RandomQuote from './components/quote/RandomQuote';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './layouts/Layout';
+import Home from './pages/Home';
+import CounterPage from './pages/CounterPage';
+import QuotePage from './pages/QuotePage';
+import './styles/globals.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <div className="page">
-        <header className="page-header">
-          <h1 className="page-title">Interactive Quote & Counter</h1>
-        </header>
-
-        <div className="page-grid">
-          <section className="card">
-            <Counter />
-          </section>
-
-          <RandomQuote />
+    <Router>
+      <Layout>
+        <div className="app">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/counter" element={<CounterPage />} />
+            <Route path="/quote" element={<QuotePage />} />
+          </Routes>
         </div>
-      </div>
-    </div>
+      </Layout>
+    </Router>
   );
 }
 

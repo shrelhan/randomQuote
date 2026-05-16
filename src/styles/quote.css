@@ -1,0 +1,21 @@
+.quote {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #334e68;
+  min-height: 5rem;
+  padding: 1.2rem 1.4rem;
+  background: #f8fafc;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.quote-clickable {
+  cursor: pointer;
+}
+
+.copy-status {
+  margin: 0.75rem 0 0;
+  color: #2563eb;
+  font-size: 0.95rem;
+}

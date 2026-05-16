@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { useRandomQuote } from '../../hooks/use-random-quote';
-import './RandomQuote.css';
+import { useRandomQuote } from '../hooks/use-random-quote';
+import Card from '../components/common/Card';
+import Button from '../components/common/Button';
+import '../styles/quote.css';
 
-function RandomQuote() {
+function QuotePage() {
   const { quote, isLoading, error, fetchRandomQuotes } = useRandomQuote();
   const [copyStatus, setCopyStatus] = React.useState('');
 
@@ -71,7 +73,7 @@ function RandomQuote() {
   }
 
   return (
-    <section className="card">
+    <Card>
       <h2 className="hero">Random Quote</h2>
       <p
         className={quote ? 'quote quote-clickable' : 'quote'}
@@ -84,11 +86,11 @@ function RandomQuote() {
       </p>
       {copyStatus && <p className="copy-status">{copyStatus}</p>}
       {error && <p className="error">Error: {error}</p>}
-      <button className="button" onClick={fetchRandomQuotes}>
-        Fetch Random Quote
-      </button>
-    </section>
+      <Button onClick={fetchRandomQuotes} disabled={isLoading}>
+        {isLoading ? 'Loading...' : 'Fetch Random Quote'}
+      </Button>
+    </Card>
   );
 }
 
-export default RandomQuote;
+export default QuotePage;
