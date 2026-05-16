@@ -7,7 +7,7 @@ function Navigation() {
       <div className="nav-container">
         <div className="nav-brand">
           <Link to="/" className="nav-logo">
-            React App
+            shrelhan
           </Link>
         </div>
         <ul className="nav-menu">
