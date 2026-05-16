@@ -1,0 +1,17 @@
+# Build output
+dist
+dist-ssr
+*.local
+
+# Dependencies
+node_modules
+
+# Coverage reports
+coverage
+
+# Logs and system files
+*.log
+.DS_Store
+
+# Public assets you don't want formatted
+public
