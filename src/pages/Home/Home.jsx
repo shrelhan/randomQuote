@@ -1,5 +1,5 @@
-import Counter from '../components/features/Counter';
-import RandomQuote from '../components/features/RandomQuote';
+import Counter from '@/features/counter/components/Counter';
+import RandomQuote from '@/features/quotes/components/RandomQuote';
 import './Home.css';
 
 function Home() {

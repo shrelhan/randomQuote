@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Button from '../common/Button';
-import Card from '../common/Card';
-import '../../styles/counter.css';
+import Button from '@/shared/components/Button';
+import Card from '@/shared/components/Card';
+import './Counter.css';
 
 function Counter() {
   const [count, setCount] = React.useState(0);

@@ -1,7 +1,7 @@
-import Navigation from '../components/Navigation';
-import './Layout.css';
+import Navigation from './Navigation';
+import './MainLayout.css';
 
-function Layout({ children }) {
+function MainLayout({ children }) {
   return (
     <div className="layout">
       <Navigation />
@@ -10,4 +10,4 @@ function Layout({ children }) {
   );
 }
 
-export default Layout;
+export default MainLayout;

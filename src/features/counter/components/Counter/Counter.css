@@ -18,6 +18,10 @@
   font-weight: 600;
 }
 
+.counter .btn {
+  margin-top: 0;
+}
+
 @media (max-width: 440px) {
   .counter {
     flex-direction: column;
